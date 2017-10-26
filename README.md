@@ -1,2 +1,3 @@
 # WinLoaderJs
-A blocking loader using RXJS in Angular JS
+A blocking loader using RXJS in Angular JS 
+#Under development
