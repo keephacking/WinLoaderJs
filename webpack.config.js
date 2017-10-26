@@ -8,12 +8,19 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    contentBase: './'
+    contentBase: './',
+     hot: true
   },
   module: {
     rules: [
       {
+        test: /.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+      },
+      {
         test: /\.scss$/,
+        exclude: /node_modules/,
         use: [
           { loader: 'style-loader' },
           {

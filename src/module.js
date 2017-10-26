@@ -8,7 +8,7 @@ angular.module("winLoaderModule", [])
             template:
             `<div class='win-loader-wrapper'><div class='win-loader'>
              <div class='circle'></div>
-             <div class='circle'></div>
+             <div class='circle'></div>      
              <div class='circle'></div> <div class='circle'></div>
              <div class='circle'></div> <div class='circle'></div>
              <div class='circle'></div>
@@ -23,8 +23,8 @@ angular.module("winLoaderModule", [])
             }
         }
     }])
-    .service("winLoadingService", ["rxService",function (rxService) {
-        var loaderSubject$ = new rxService.Rx.Subject();
+    .service("winLoadingService", [function () {
+        var loaderSubject$ = new Rx.Subject(); 
         console.log(loaderSubject$);
         var loader$ = loaderSubject$.asObservable();
         function _start() {
@@ -38,10 +38,4 @@ angular.module("winLoaderModule", [])
             end: _end,
             $: loader$
         }
-    }])
-    .service("rxService", function () {
-        var Rx = require('rxjs/Rx');
-        return {
-            Rx: Rx
-        }
-    });
+    }]);
