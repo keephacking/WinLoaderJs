@@ -23,7 +23,7 @@ angular.module("winLoaderModule", [])
             }
         }
     }])
-    .service("winLoadingService", [function () {
+    .service("winLoadingService", ["rxService",function (rxService) {
         var loaderSubject$ = new rxService.Rx.Subject();
         console.log(loaderSubject$);
         var loader$ = loaderSubject$.asObservable();

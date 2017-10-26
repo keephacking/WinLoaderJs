@@ -7,19 +7,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="stylesheet" href="./dist/winloader.min.css">
     <title>Win loader</title>
 
-
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 <script src="./node_modules/angular/angular.min.js"></script>
 <script src="./dist/winloader.min.js"></script>
 <script src="./src/controller.js"></script>
 
-<body ng-app="winLoaderModule">
+<body ng-app="winLoaderModule" ng-controller="loaderCtrl">
     <win-loader></win-loader>
-    <button ng-click="start()">Start</button>
-    <button ng-click="stop()">Stop</button>
+    <div class="fixed-top">
+        <button ng-click="start()">Start</button>
+        <button ng-click="stop()">Stop</button>
+    </div>
+
 </body>
 
 </html>
