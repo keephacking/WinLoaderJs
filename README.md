@@ -7,6 +7,6 @@ A blocking loader using RXJS in Angular JS
 
 `npm install --save rxjs`
 
-2. add `WinLoaderMod` in your app.js file
+2. add `winLoaderModule` in your app.js file
 
 3.check the demo example for more info.
