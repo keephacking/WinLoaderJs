@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="winLoaderModule">
+<html lang="en" ng-app="app">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Win loader</title>
+    <title>Win loader </title>
 
     <link rel="stylesheet" href="./src/style.css">
 </head>
@@ -16,7 +16,7 @@
 <script src="./dist/winloader.min.js"></script>
 <script src="./src/controller.js"></script>
 
-<body ng-app="winLoaderModule" ng-controller="loaderCtrl">
+<body ng-controller="loaderCtrl">
     <win-loader></win-loader>
     <div class="fixed-top">
         <button ng-click="start()">Start</button>
